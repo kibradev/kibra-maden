@@ -59,6 +59,7 @@ AddEventHandler("kibra-maden:kazmageriVerdim", function()
 	local src = source
     local xPlayer = ESX.GetPlayerFromId(src)
             xPlayer.removeInventoryItem('kazma', 1)
+	    xPlayer.addMoney(Config.KazmaFiyat)
             TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'Kazmanı geri verdin +500 $'})
 end)
 
